@@ -20,23 +20,27 @@
     </div>
     <div class="add-events">
       <div class="for_center">
-        <input type="checkbox" class="checkbox" />
-        <span class="custom_checkbox"></span>
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <span class="custom_checkbox" id="custom_checkbox"></span>
         <input
           type="text number"
           class="add_text"
+          id="add_text"
           placeholder="Create a new todo…"
         />
       </div>
     </div>
-    <ul class="same_class ul">
-      <li>All</li>
-      <li>Active</li>
-      <li>Completed</li>
+
+    <section id="box-wrapper" class="section"></section>
+
+    <ul class="same_class ul" id="ul">
+      <li id="all">All</li>
+      <li id="active">Active</li>
+      <li id="completed">Completed</li>
     </ul>
 
     <footer>
-      <h1 class="footer_h1">Drag and drop to reorder list</h1>
+      <h1 class="footer_h1" id="reorder">Drag and drop to reorder list</h1>
     </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>

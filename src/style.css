@@ -104,6 +104,20 @@ body {
   font-family: "DM Sans", sans-serif;
   margin-top: 40px;
 }
+.box {
+  width: 327px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-inline: 10px 0px;
+  flex-direction: row;
+}
+.section {
+  overflow-y: auto;
+  height: 500px;
+}
 @media (min-width: 1440px) {
   .for_background {
     background-image: url(/images/bg-desktop-light.jpg);
