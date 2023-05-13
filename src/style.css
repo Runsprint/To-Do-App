@@ -1,0 +1,126 @@
+* {
+  font-family: "DM Sans", sans-serif;
+}
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox:checked + .custom_checkbox {
+  background-color: #c058f3;
+  /* background: linear-gradient(130deg, #55ddff 0%, #c058f3 100%); */
+  background-image: url(/images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.custom_checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+.for_background {
+  background-image: url(/images/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 143px;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 120px;
+  padding-top: 57px;
+}
+.moon {
+  height: 25px;
+}
+.todo {
+  color: white;
+  font-size: 38px;
+  letter-spacing: 12px;
+  font-weight: 600;
+  font-family: "DM Sans", sans-serif;
+}
+.add-events {
+  width: 327px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 72px;
+  padding-inline: 10px 0px;
+}
+.for_center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.add_text {
+  height: 30px;
+  border: none;
+}
+.same_class {
+  width: 327px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-inline: 10px 0px;
+  flex-direction: row;
+}
+
+.ul {
+  font-size: 16px;
+  font-weight: 700;
+  color: grey;
+  justify-content: center;
+  gap: 19px;
+  background-color: #ffffff;
+}
+.ul li:hover {
+  color: blue;
+  cursor: pointer;
+}
+.footer_h1 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.19px;
+  color: #9495a5;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 40px;
+}
+@media (min-width: 1440px) {
+  .for_background {
+    background-image: url(/images/bg-desktop-light.jpg);
+    height: 243px;
+    justify-content: center;
+    gap: 366px;
+  }
+  .add-events {
+    width: 540px;
+    height: 64px;
+    bottom: 162px;
+  }
+  .add_text {
+    width: 417px;
+  }
+  .same_class {
+    width: 540px;
+    height: 64px;
+  }
+}
