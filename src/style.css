@@ -15,7 +15,7 @@ body {
   opacity: 0;
 }
 
-.checkbox:checked + .custom_checkbox {
+.checkbox:checked + span {
   background-color: #c058f3;
   /* background: linear-gradient(130deg, #55ddff 0%, #c058f3 100%); */
   background-image: url(/images/icon-check.svg);
@@ -23,7 +23,7 @@ body {
   background-position: center;
 }
 
-.custom_checkbox {
+span {
   display: inline-block;
   width: 20px;
   height: 20px;
