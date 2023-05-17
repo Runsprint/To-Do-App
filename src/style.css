@@ -16,9 +16,8 @@ body {
 }
 
 .checkbox:checked + span {
-  background-color: #c058f3;
-  /* background: linear-gradient(130deg, #55ddff 0%, #c058f3 100%); */
-  background-image: url(/images/icon-check.svg);
+  background-image: url(/images/icon-check.svg),
+    linear-gradient(130deg, #55ddff 0%, #c058f3 100%);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -114,9 +113,26 @@ span {
   padding-inline: 10px 0px;
   flex-direction: row;
 }
+.items {
+  width: 327px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10px 0px;
+  display: none;
+}
 .section {
   overflow-y: auto;
-  height: 500px;
+}
+.hide {
+  display: none;
+}
+.flex {
+  display: flex;
 }
 @media (min-width: 1440px) {
   .for_background {
