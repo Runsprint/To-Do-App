@@ -131,8 +131,16 @@ span {
 .hide {
   display: none;
 }
+
 .flex {
   display: flex;
+}
+
+.p {
+  padding-left: 10px;
+}
+.img {
+  margin-left: 223px;
 }
 @media (min-width: 1440px) {
   .for_background {
