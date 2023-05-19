@@ -80,7 +80,7 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
     p.classList.add("p");
 
     var img = new Image();
-    img.src = "./images/icon-cross.svg";
+    img.src = "../images/icon-cross.svg";
     newDiv.append(img);
     img.classList.add("img");
     //delete function when clicke cross img
