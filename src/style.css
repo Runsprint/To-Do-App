@@ -14,7 +14,12 @@ body {
   position: absolute;
   opacity: 0;
 }
+span :hover {
+  cursor: pointer;
+  border-color: #c058f3;
 
+  color: rgb(19, 20, 53);
+}
 .checkbox:checked + span {
   background-image: url(/images/icon-check.svg),
     linear-gradient(130deg, #55ddff 0%, #c058f3 100%);
@@ -41,7 +46,8 @@ span {
   gap: 120px;
   padding-top: 57px;
 }
-.moon {
+.moon,
+.sun {
   height: 25px;
 }
 .todo {
@@ -122,8 +128,11 @@ span {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 10px 0px;
+  padding-inline: 5px 5px;
   display: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9495a5;
 }
 .section {
   overflow-y: auto;
@@ -131,18 +140,43 @@ span {
 .hide {
   display: none;
 }
-
+.sun {
+  display: none;
+}
 .flex {
   display: flex;
 }
-
+.newDiv {
+  position: relative;
+}
+.newDiv,
+.items {
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9495a5;
+}
 .p {
-  padding-left: 10px;
+  margin-left: 10px;
+  max-width: 200px;
 }
 .img {
-  margin-left: 223px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.ul {
+  margin-top: 3px;
 }
 @media (min-width: 1440px) {
+  .sections_div {
+    position: relative;
+    top: -125px;
+  }
+  .newDiv,
+  .items {
+    width: 540px;
+  }
   .for_background {
     background-image: url(/images/bg-desktop-light.jpg);
     height: 243px;
@@ -157,8 +191,7 @@ span {
   .add_text {
     width: 417px;
   }
-  .same_class {
+  .ul {
     width: 540px;
-    height: 64px;
   }
 }
