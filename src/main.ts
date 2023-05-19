@@ -13,7 +13,7 @@ let sun = document.getElementById("sun") as HTMLImageElement;
 let moon = document.getElementById("moon") as HTMLImageElement;
 let addEvents = document.getElementById("add-events") as HTMLElement;
 let background_img = document.getElementById("background_img") as HTMLElement;
-
+let box: any; // box is null and after in input.addeventlistener is get quarysellector mnishvnelobas and after when we click onmoon it already is array and changing ackground
 input.addEventListener("keydown", (event: KeyboardEvent) => {
   if (
     event.key === "Enter" &&
@@ -165,7 +165,7 @@ clear.addEventListener("click", () => {
   items_left.innerHTML = counter + "ragac warwera";
 });
 // moon and sun functions
-let box: any; // box is null and after in input.addeventlistener is get quarysellector mnishvnelobas and after when we click onmoon it already is array and changing ackground
+
 moon.addEventListener("click", () => {
   sun.style.display = "flex";
   moon.style.display = "none";
@@ -190,7 +190,7 @@ moon.addEventListener("click", () => {
 sun.addEventListener("click", () => {
   sun.style.display = "none";
   moon.style.display = "flex";
-  body.style.backgroundColor = "grey";
+  body.style.backgroundColor = "#f2f2f2";
   addEvents.style.backgroundColor = "#ffffff";
   addEvents.style.color = "grey";
   input.style.backgroundColor = "#ffffff";
