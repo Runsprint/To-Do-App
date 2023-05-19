@@ -34,12 +34,12 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
       targetEllement = newDiv; // target = this element, which I touch and start drag
     });
 
-    function drag(event: DragEvent) {
-      targetEllement = event.target as HTMLElement;
-      if (event.dataTransfer) {
-        event.dataTransfer.setData("div", targetEllement.id);
-      }
-    }
+    // function drag(event: DragEvent) {
+    //   targetEllement = event.target as HTMLElement;
+    //   if (event.dataTransfer) {
+    //     event.dataTransfer.setData("div", targetEllement.id);
+    //   }
+    // }
 
     newDiv.addEventListener("dragend", () => {
       targetEllement = null; // we stop touching(dragging) and thats why targetelement is null
