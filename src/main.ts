@@ -13,7 +13,7 @@ let sun = document.getElementById("sun") as HTMLImageElement;
 let moon = document.getElementById("moon") as HTMLImageElement;
 let addEvents = document.getElementById("add-events") as HTMLElement;
 let background_img = document.getElementById("background_img") as HTMLElement;
-let box: any; // box is null and after in input.addeventlistener is get quarysellector mnishvnelobas and after when we click onmoon it already is array and changing ackground
+
 input.addEventListener("keydown", (event: KeyboardEvent) => {
   if (
     event.key === "Enter" &&
@@ -25,8 +25,7 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
     newDiv.classList.add("box");
     newDiv.id = "divId";
     boxWrapper.prepend(newDiv);
-    //its for forEach
-    box = document.querySelectorAll(".box");
+
     //start drag and drop function
     newDiv.draggable = true; // if we want srtart drag, element is daggable
     let targetEllement: null | HTMLElement = null; //before drug element, its null
@@ -80,7 +79,7 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
     p.classList.add("p");
 
     var img = new Image();
-    img.src = "../images/icon-cross.svg";
+    img.src = "./images/icon-cross.svg";
     newDiv.append(img);
     img.classList.add("img");
     //delete function when clicke cross img
@@ -178,9 +177,9 @@ moon.addEventListener("click", () => {
   div.style.color = "#ffffff";
   items.style.backgroundColor = "rgb(19, 20, 53";
   items.style.color = "#ffffff";
-  background_img.style.backgroundImage = "url('../images/bg-desktop-dark.jpg')";
-  if (box !== null) {
-    box.forEach((element: any) => {
+  background_img.style.backgroundImage = "url('./images/bg-desktop-dark.jpg')";
+  if (document.querySelectorAll(".box")) {
+    document.querySelectorAll(".box").forEach((element: any) => {
       element.style.backgroundColor = "rgb(19, 20, 53";
       element.style.color = "#ffffff";
     });
@@ -199,10 +198,9 @@ sun.addEventListener("click", () => {
   div.style.color = "grey";
   items.style.backgroundColor = "#ffffff";
   items.style.color = "grey";
-  background_img.style.backgroundImage =
-    "url('../images/bg-desktop-light.jpg')";
-  if (box !== null) {
-    box.forEach((element: any) => {
+  background_img.style.backgroundImage = "url('./images/bg-desktop-light.jpg')";
+  if (document.querySelectorAll(".box")) {
+    document.querySelectorAll(".box").forEach((element: any) => {
       element.style.backgroundColor = "white";
       element.style.color = "#grey";
     });
