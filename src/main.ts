@@ -13,14 +13,16 @@ let sun = document.getElementById("sun") as HTMLImageElement;
 let moon = document.getElementById("moon") as HTMLImageElement;
 let addEvents = document.getElementById("add-events") as HTMLElement;
 let background_img = document.getElementById("background_img") as HTMLElement;
-
+let darkMode = false;
 input.addEventListener("keydown", (event: KeyboardEvent) => {
   if (
     event.key === "Enter" &&
     (event.target as HTMLInputElement).value !== ""
   ) {
     textArray.push((event.target as HTMLInputElement).value);
+    let darkMode = true;
     //create div function
+
     const newDiv = document.createElement("div");
     newDiv.classList.add("box");
     newDiv.id = "divId";
@@ -32,13 +34,6 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
     newDiv.addEventListener("dragstart", () => {
       targetEllement = newDiv; // target = this element, which I touch and start drag
     });
-
-    // function drag(event: DragEvent) {
-    //   targetEllement = event.target as HTMLElement;
-    //   if (event.dataTransfer) {
-    //     event.dataTransfer.setData("div", targetEllement.id);
-    //   }
-    // }
 
     newDiv.addEventListener("dragend", () => {
       targetEllement = null; // we stop touching(dragging) and thats why targetelement is null
@@ -59,7 +54,6 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
       }
       if ((event.target as HTMLElement).classList.contains("newDiv")) {
         boxWrapper.insertBefore(targetEllement, event.target as HTMLElement);
-        console.log("rame");
       }
     }
     //created elements into div
@@ -77,6 +71,11 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
     p.innerHTML = (event.target as HTMLInputElement).value;
     newDiv.append(p);
     p.classList.add("p");
+
+    checkBox.addEventListener("click", () => {
+      p.style.textDecoration = "line-through";
+      console.log("solid");
+    });
 
     var img = new Image();
     img.src = "./images/icon-cross.svg";
@@ -150,7 +149,7 @@ all.addEventListener("click", () => {
 clear.addEventListener("click", () => {
   let counter = boxWrapper.children.length;
   for (let element of boxWrapper.children) {
-    if (element.classList[1] === "check") {
+    if (element.classList[2] === "check") {
       let removeElement = element.children[2].textContent;
       if (removeElement !== null) {
         let index = textArray.indexOf(removeElement); // find index in textarray of removeelement
@@ -178,6 +177,7 @@ moon.addEventListener("click", () => {
   items.style.backgroundColor = "rgb(19, 20, 53";
   items.style.color = "#ffffff";
   background_img.style.backgroundImage = "url('./images/bg-desktop-dark.jpg')";
+
   if (document.querySelectorAll(".box")) {
     document.querySelectorAll(".box").forEach((element: any) => {
       element.style.backgroundColor = "rgb(19, 20, 53";
