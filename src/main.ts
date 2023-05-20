@@ -178,7 +178,7 @@ moon.addEventListener("click", () => {
   div.style.color = "#ffffff";
   items.style.backgroundColor = "rgb(19, 20, 53";
   items.style.color = "#ffffff";
-  background_img.style.backgroundImage = "url('./images/bg-desktop-dark.jpg')";
+  background_img.style.backgroundImage = "url('../images/bg-desktop-dark.jpg')";
   if (box !== null) {
     box.forEach((element: any) => {
       element.style.backgroundColor = "rgb(19, 20, 53";
@@ -199,7 +199,8 @@ sun.addEventListener("click", () => {
   div.style.color = "grey";
   items.style.backgroundColor = "#ffffff";
   items.style.color = "grey";
-  background_img.style.backgroundImage = "url('./images/bg-desktop-light.jpg')";
+  background_img.style.backgroundImage =
+    "url('../images/bg-desktop-light.jpg')";
   if (box !== null) {
     box.forEach((element: any) => {
       element.style.backgroundColor = "white";
