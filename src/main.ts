@@ -121,7 +121,7 @@ completed.addEventListener("click", () => {
       counter++;
     }
   }
-  items_left.innerHTML = counter + "ragac warwera";
+  items_left.innerHTML = counter + " items left";
 });
 
 active.addEventListener("click", () => {
@@ -134,7 +134,7 @@ active.addEventListener("click", () => {
       counter++;
     }
   }
-  items_left.innerHTML = counter + "ragac warwera";
+  items_left.innerHTML = counter + " items Left";
 });
 
 all.addEventListener("click", () => {
@@ -143,7 +143,7 @@ all.addEventListener("click", () => {
       element.classList.remove("hide");
     }
   }
-  items_left.innerHTML = textArray.length + "ragac warwera";
+  items_left.innerHTML = textArray.length + " items left";
 });
 
 clear.addEventListener("click", () => {
@@ -160,7 +160,7 @@ clear.addEventListener("click", () => {
     }
   }
 
-  items_left.innerHTML = counter + "ragac warwera";
+  items_left.innerHTML = counter + "items left";
 });
 // moon and sun functions
 
