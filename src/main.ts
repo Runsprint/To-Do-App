@@ -13,14 +13,14 @@ let sun = document.getElementById("sun") as HTMLImageElement;
 let moon = document.getElementById("moon") as HTMLImageElement;
 let addEvents = document.getElementById("add-events") as HTMLElement;
 let background_img = document.getElementById("background_img") as HTMLElement;
-let darkMode = false;
+
 input.addEventListener("keydown", (event: KeyboardEvent) => {
   if (
     event.key === "Enter" &&
     (event.target as HTMLInputElement).value !== ""
   ) {
     textArray.push((event.target as HTMLInputElement).value);
-    let darkMode = true;
+
     //create div function
 
     const newDiv = document.createElement("div");
