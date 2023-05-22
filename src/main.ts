@@ -27,7 +27,11 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
     newDiv.classList.add("box");
     newDiv.id = "divId";
     boxWrapper.prepend(newDiv);
-
+    if (theme === "light") {
+      newDiv.style.backgroundColor = "#ffffff";
+    } else {
+      newDiv.style.backgroundColor = " rgb(19, 20, 53)";
+    }
     //start drag and drop function
     newDiv.draggable = true; // if we want srtart drag, element is daggable
     let targetEllement: null | HTMLElement = null; //before drug element, its null
@@ -108,13 +112,14 @@ input.addEventListener("keydown", (event: KeyboardEvent) => {
         element.classList.add("check");
       });
     }
+    input.value = "";
   }
 });
 //clear active and comptited functions
 completed.addEventListener("click", () => {
   let counter = 0;
   for (let element of boxWrapper.children) {
-    if (element.classList[1] !== "check") {
+    if (element.classList[2] !== "check") {
       element.classList.add("hide");
     } else if (element.classList[1] === "check") {
       element.classList.remove("hide");
@@ -127,7 +132,7 @@ completed.addEventListener("click", () => {
 active.addEventListener("click", () => {
   let counter = 0;
   for (let element of boxWrapper.children) {
-    if (element.classList[1] === "check") {
+    if (element.classList[2] === "check") {
       element.classList.add("hide");
     } else {
       element.classList.remove("hide");
@@ -184,9 +189,11 @@ moon.addEventListener("click", () => {
       element.style.color = "#ffffff";
     });
   }
+  theme = "dark";
 });
-
+let theme = "light";
 sun.addEventListener("click", () => {
+  theme = "light";
   sun.style.display = "none";
   moon.style.display = "flex";
   body.style.backgroundColor = "#f2f2f2";

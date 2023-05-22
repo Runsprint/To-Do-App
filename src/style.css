@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 .checkbox {
   width: 20px;
@@ -113,7 +113,7 @@ span {
   width: 327px;
   height: 48px;
   border-radius: 5px;
-  background-color: #ffffff;
+
   display: flex;
   align-items: center;
   padding-inline: 10px 0px;
